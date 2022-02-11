@@ -133,4 +133,5 @@ for n in range(len(link_list)):
 df = pd.DataFrame(kobo_info_list)
 
 # excelで文字化けしないようにutf_8_sigでエンコード
+# df.to_csv('kobo_scraping.csv', encoding='utf_8_sig', header = False, index = False)
 df.to_csv('kobo_scraping.csv', encoding='utf_8_sig', index = False)
