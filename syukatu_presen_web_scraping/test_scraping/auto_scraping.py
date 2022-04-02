@@ -48,7 +48,8 @@ for csv in range(len(deadline_old_csv)):
     # 締切日が過ぎている場合
     if deadline <= datetime.date.today():
         # 締切日が過ぎている公募をWebサイトから削除
-        webdriver.findElement(By.linkText(title_old_csv[csv][0])).click();
+        # webdriver.findElement(By.linkText(title_old_csv[csv][0])).click();
+        webdriver.find_element_by_link_text(title_old_csv[csv][0]).click();
         time.sleep(1)
         webdriver.find_element_by_xpath('//*[@id="kobo_info_form"]/div/div/p/a').click()
         time.sleep(1)
